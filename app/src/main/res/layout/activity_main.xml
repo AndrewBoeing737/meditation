@@ -4,15 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+android:background="@drawable/water"
+    tools:context=".MainActivity"
+    >
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/imageButton2"
+        android:layout_width="161dp"
+        android:layout_height="161dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/free_icon_yin_yang_510186" />
 </androidx.constraintlayout.widget.ConstraintLayout>
