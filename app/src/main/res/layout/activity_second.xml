@@ -26,14 +26,15 @@
         android:layout_height="569dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.376">
+        app:layout_constraintVertical_bias="0.319">
 
         <Button
             android:id="@+id/bodyButton"
-            android:layout_width="179dp"
-            android:layout_height="87dp"
+            android:layout_width="181dp"
+            android:layout_height="163dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="4dp"
             android:background="@drawable/shape_list"
@@ -41,12 +42,12 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.151" />
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="179dp"
-            android:layout_height="87dp"
+            android:layout_width="202dp"
+            android:layout_height="176dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="1dp"
             android:background="@drawable/shape_list"
@@ -60,49 +61,15 @@
 
         <Button
             android:id="@+id/candlesButton"
-            android:layout_width="179dp"
-            android:layout_height="87dp"
-            android:layout_marginBottom="116dp"
+            android:layout_width="194dp"
+            android:layout_height="166dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/shape_list"
             android:text="Медитация со свечами"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintHorizontal_bias="0.07"
             app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/Music"
-            android:layout_width="179dp"
-            android:layout_height="87dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/shape_list"
-            android:text="музыка № 1"
-            app:layout_constraintEnd_toStartOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button1" />
-
-        <Button
-            android:id="@+id/Music2"
-            android:layout_width="179dp"
-            android:layout_height="87dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/shape_list"
-            android:text="Музыка №2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bodyButton" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="179dp"
-            android:layout_height="87dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/shape_list"
-            android:text="Музыка №3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/candlesButton" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -120,13 +87,10 @@
             android:id="@+id/imageView6"
             android:layout_width="193dp"
             android:layout_height="168dp"
-            android:layout_marginTop="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.98"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Music2"
-            app:layout_constraintVertical_bias="0.688"
             app:srcCompat="@drawable/candle" />
 
         <ImageView
@@ -137,8 +101,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.07"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Music"
-            app:layout_constraintVertical_bias="0.287"
             app:srcCompat="@drawable/chakra" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
