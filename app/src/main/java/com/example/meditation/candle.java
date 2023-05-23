@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class candle extends AppCompatActivity {
-    private Button button;
+
     List<methodConstuctor> actions = new ArrayList<methodConstuctor>();
     MediaPlayer mediaPlayer ;
 
@@ -28,12 +28,10 @@ public class candle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_candle);
-        button = findViewById(R.id.dom);
         setActionsData();
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         MethodAdapter adapter = new MethodAdapter(this, actions);
         recyclerView.setAdapter(adapter);
-        button.setOnClickListener(listener);
         mediaPlayer = new MediaPlayer();
         AssetFileDescriptor descriptor = null;
         try {
@@ -50,14 +48,7 @@ public class candle extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    private View.OnClickListener listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            mediaPlayer.stop();
-            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-            startActivity(intent);
-        }
-    };
+
 
    private void setActionsData() {
      actions.add(new methodConstuctor("Этим вы вряд ли сможете заняться в офисе, так что лучше опробуйте этот метод дома. В основе любой медитации лежит умение концентрировать свое внимание на объекте. Наше тело и сознание полностью расслаблено, но при этом мы сконцентрированы на определенном предмете. Это довольно сложно, если учесть, что в наше время многозадачности наше сознание только и делает, что переключается в короткий промежуток времени между несколькими задачами. Некоторые умудряются делать их практически одновременно. Но как уже не один раз было замечено, что успешное выполнение задания заключается в отсечении всего лишнего и концентрации на конкретной цели. В этом нам и поможет практика медитации со свечами.",

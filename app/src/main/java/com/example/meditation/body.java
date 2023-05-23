@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class body extends AppCompatActivity {
-    private Button button;
     List<methodConstuctor> actions = new ArrayList<methodConstuctor>();
     MediaPlayer mediaPlayer ;
 
@@ -29,13 +28,12 @@ public class body extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_body);
-        button = findViewById(R.id.home1);
+
         setActionsData();
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         MethodAdapter adapter = new MethodAdapter(this, actions);
         recyclerView.setAdapter(adapter);
-        button.setOnClickListener(listener);
-        mediaPlayer = new MediaPlayer();
+       mediaPlayer = new MediaPlayer();
         AssetFileDescriptor descriptor = null;
         try {
             descriptor = getAssets().openFd("Metallica_-_Seek_Destroy_b64f0d414.mp3");
@@ -51,14 +49,7 @@ public class body extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    private View.OnClickListener listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            mediaPlayer.stop();
-            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-            startActivity(intent);
-        }
-    };
+
     private void setActionsData() {
         actions.add(new methodConstuctor("В нашем теле происходит тысячи химических процессов, но мы их не замечаем. Осознание своего тела, ощущение его от макушки до кончиков пальцев на ногах — это еще один из прекрасных методов релаксации и концентрации внимания. Существует единственный момент, о котором вы должны знать — если поза очень удобная, вы просто можете заснуть :)",
                 "Метод:\n" +

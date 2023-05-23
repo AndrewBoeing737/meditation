@@ -16,8 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class breath extends AppCompatActivity {
-
-    private Button button;
     List<methodConstuctor> actions = new ArrayList<methodConstuctor>();
     MediaPlayer mediaPlayer ;
 
@@ -30,12 +28,10 @@ public class breath extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breath);
-        button = findViewById(R.id.hause);
         setActionsData();
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         MethodAdapter adapter = new MethodAdapter(this, actions);
         recyclerView.setAdapter(adapter);
-        button.setOnClickListener(listener);
         mediaPlayer = new MediaPlayer();
         AssetFileDescriptor descriptor = null;
         try {
@@ -52,14 +48,7 @@ public class breath extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    private View.OnClickListener listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            mediaPlayer.stop();
-            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-            startActivity(intent);
-        }
-    };
+
    private void setActionsData() {
        actions.add(new methodConstuctor( "Глубокое дыхание — один из самых простых и эффективных техник, которая доступна не только тем, кто давно практикует, но и новичкам.",
                "Метод:\n" +
