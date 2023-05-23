@@ -19,6 +19,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
+
+
 public class Music extends AppCompatActivity implements Runnable {
     //private MediaPlayer mediaPlayer = new MediaPlayer();
     private MediaPlayer mediaPlayer = null;
@@ -117,12 +119,12 @@ public class Music extends AppCompatActivity implements Runnable {
                     playSong();
                     break;
                 case R.id.haus:
-                    if (mediaPlayer.isPlaying()) {
+                    if (wasPlaying || mediaPlayer != null){
                         mediaPlayer.stop();
                     }
-                    Intent intent2 = new Intent(getApplicationContext(), SecondActivity.class);
-                    startActivity(intent2);
-                    break;
+                    Intent intent8 = new Intent(getApplicationContext(), SecondActivity.class);
+                        startActivity(intent8);
+                        break;
                 case R.id.fabBack:
                     if (mediaPlayer != null)
                         mediaPlayer.seekTo(mediaPlayer.getCurrentPosition() - 5000);
@@ -171,8 +173,9 @@ public class Music extends AppCompatActivity implements Runnable {
                 mediaPlayer.start(); //Старт потока
                 new Thread(this).start(); //Запуск дополнительного потока
 
-                wasPlaying = true;
-                mediaPlayer.setLooping(true);
+                if (mediaPlayer.isPlaying() || mediaPlayer != null) {
+                    mediaPlayer.setLooping(true);
+                }
             }else {
 
 

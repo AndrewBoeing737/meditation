@@ -116,7 +116,7 @@ public class Music2 extends AppCompatActivity implements Runnable {
                                         playSong();
                                         break;
                                 case R.id.haus:
-                                        if (mediaPlayer.isPlaying()) {
+                                        if (wasPlaying || mediaPlayer != null){
                                                 mediaPlayer.stop();
                                         }
                                         Intent intent2 = new Intent(getApplicationContext(), SecondActivity.class);
@@ -171,7 +171,9 @@ public class Music2 extends AppCompatActivity implements Runnable {
                                 new Thread(this).start(); //Запуск дополнительного потока
 
                                 wasPlaying = true;
-                                mediaPlayer.setLooping(true);
+                                if (mediaPlayer.isPlaying() || mediaPlayer != null) {
+                                        mediaPlayer.setLooping(true);
+                                }
                         }else {
 
 
