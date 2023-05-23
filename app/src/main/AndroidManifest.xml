@@ -12,9 +12,6 @@
         android:theme="@style/Theme.Meditation"
         tools:targetApi="31">
         <activity
-            android:name=".Music3"
-            android:exported="false" />
-        <activity
             android:name=".Melody"
             android:exported="false" />
         <activity
@@ -27,13 +24,7 @@
             android:name=".Mu"
             android:exported="false" />
         <activity
-            android:name=".Music2"
-            android:exported="false" />
-        <activity
             android:name=".choiceMusic"
-            android:exported="false" />
-        <activity
-            android:name=".Music"
             android:exported="false" />
         <activity
             android:name=".body"

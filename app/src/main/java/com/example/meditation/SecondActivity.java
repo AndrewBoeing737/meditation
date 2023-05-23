@@ -12,9 +12,7 @@ public class SecondActivity extends AppCompatActivity {
     private Button button1;
     private Button candlesButton;
     private Button bodyButton;
-    private Button music;
-    private Button music2;
-    private Button music3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
