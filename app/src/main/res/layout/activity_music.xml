@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/_d48cc4931068721007e798bbfcd1e8c"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="ПРИЛОЖЕНИЕ ПЛЕЕР"
+        android:text="Музыка №1"
         android:textColor="#4CAF50"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -70,17 +71,6 @@
         app:layout_constraintTop_toTopOf="@+id/seekBarHint">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabRepeat"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="30dp"
-            android:backgroundTint="#F29D0A"
-            android:clickable="true"
-            app:backgroundTint="#4CAF50"
-            app:fabCustomSize="50dp"
-            app:srcCompat="@android:drawable/ic_popup_sync" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabBack"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -118,9 +108,9 @@
         android:id="@+id/haus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
         android:text="Home"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         app:layout_constraintVertical_bias="0.89" />

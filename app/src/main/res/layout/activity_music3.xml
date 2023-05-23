@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/letnyaya_tropinka_v_gory"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,7 +14,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="ПРИЛОЖЕНИЕ ПЛЕЕР"
-        android:textColor="#4CAF50"
+        android:textColor="#FFEB3B"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +29,7 @@
         android:gravity="center"
         android:hint="Название трека"
         android:textColor="#4CAF50"
-        android:textColorHint="#4CAF50"
+        android:textColorHint="#FFEB3B"
         android:textSize="24sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +45,7 @@
         android:progressBackgroundTint="#D1B076"
         android:progressTint="#4CAF50"
         android:scrollbarSize="10dp"
-        android:thumbTint="#4CAF50"
+        android:thumbTint="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/metaDataAudio" />
@@ -69,16 +70,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/seekBarHint">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabRepeat"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="30dp"
-            android:backgroundTint="#F29D0A"
-            android:clickable="true"
-            app:backgroundTint="#4CAF50"
-            app:fabCustomSize="50dp"
-            app:srcCompat="@android:drawable/ic_popup_sync" />
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabBack"
@@ -118,11 +110,11 @@
         android:id="@+id/haus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
         android:text="Home"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.89" />
+        app:layout_constraintVertical_bias="0.917" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,7 @@ public class Music extends AppCompatActivity implements Runnable {
     private FloatingActionButton fabPlayPause;
     private boolean wasPlaying = false;
     private  FloatingActionButton fabBack;
-    private FloatingActionButton fabRepeat;
+
     private FloatingActionButton fabForward;
 
 
@@ -46,7 +46,7 @@ public class Music extends AppCompatActivity implements Runnable {
 
         fabPlayPause = findViewById(R.id.fabPlayPause); //поле PlayPause
         fabBack = findViewById(R.id.fabBack); //поле Back
-        fabRepeat = findViewById(R.id.fabRepeat);//поле Repeat
+
         fabForward = findViewById(R.id.fabForward);//поле Forward
         seekBarHint = findViewById(R.id.seekBarHint); //поле BarHint
         seekBar = findViewById(R.id.seekBar);//поле seekBar
@@ -101,7 +101,7 @@ public class Music extends AppCompatActivity implements Runnable {
 
         fabPlayPause.setOnClickListener(listener);
         fabBack.setOnClickListener(listener);
-        fabRepeat.setOnClickListener(listener);
+
         fabForward.setOnClickListener(listener);
         button.setOnClickListener(listener);
 
@@ -131,12 +131,6 @@ public class Music extends AppCompatActivity implements Runnable {
                     if (mediaPlayer != null)
                         mediaPlayer.seekTo(mediaPlayer.getCurrentPosition() + 5000);
                     break;
-                case R.id.fabRepeat:
-                    if (mediaPlayer != null) {
-                        if (mediaPlayer.isLooping()) {
-                            mediaPlayer.setLooping(false);
-                        } else mediaPlayer.setLooping(true);
-                    }
             }
         }
     };
@@ -178,6 +172,7 @@ public class Music extends AppCompatActivity implements Runnable {
                 new Thread(this).start(); //Запуск дополнительного потока
 
                 wasPlaying = true;
+                mediaPlayer.setLooping(true);
             }else {
 
 
