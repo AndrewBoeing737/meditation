@@ -9,13 +9,13 @@ android:background="@drawable/lake"
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="255dp"
-        android:layout_height="70dp"
+        android:layout_width="321dp"
+        android:layout_height="66dp"
         android:background="@drawable/shape_list"
         android:gravity="center"
         android:text="Медитация «осознание тела»"
-        android:textSize="20sp"
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
