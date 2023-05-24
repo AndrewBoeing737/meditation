@@ -1,19 +1,15 @@
 package com.example.meditation;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 public class body extends AppCompatActivity {
     List<methodConstuctor> actions = new ArrayList<methodConstuctor>();
     MediaPlayer mediaPlayer ;
@@ -49,7 +45,6 @@ public class body extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
     private void setActionsData() {
         actions.add(new methodConstuctor("В нашем теле происходит тысячи химических процессов, но мы их не замечаем. Осознание своего тела, ощущение его от макушки до кончиков пальцев на ногах — это еще один из прекрасных методов релаксации и концентрации внимания. Существует единственный момент, о котором вы должны знать — если поза очень удобная, вы просто можете заснуть :)",
                 "Метод:\n" +
